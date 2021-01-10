@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+//     let flag = 0
+//     function quickSortM(arr, i, j){
+//       let left = i
+//       let right = j
+//       let pivot = arr[i]
+//       while(left < right){
+//         while(left < right && arr[right] >= pivot) right--
+//         arr[left] = arr[right]
+//         while(left < right && arr[left] < pivot) left++
+//         arr[right] = arr[left]
+//       }
+//       arr[left] = pivot
+//       console.log(left)
+//      return left
+      
+//     }
+//     function quickSort(arr, i, j){
+//       let middle = quickSortM(arr, i, j)
+//       console.log(i,j)
+//       if(i<j){
+//         quickSort(arr,i,middle-1)
+//       quickSort(arr,middle+1,j)
+//       }
+//     }
+
+// let arr = [10,11,9,4,5,7454,7,5,745,74574,57,857,54,5,5,5,5,11,1,1,,9,9]
+// // console.log(11)
+// quickSort(arr, 0, arr.length-1)
+// // console.log(111)
+
+
+
+// function quickSortM(arr, left, right){
+//   // let left = 0
+//   // let right = arr.length - 1
+//   let pivot = arr[right]
+//   while(left < right){
+//     while(left < right && arr[left] <= pivot) left++
+//     arr[right] = arr[left]
+//     while(left < right && arr[right] >= pivot) right--
+//     arr[left] = arr[right]
+//   }
+//   arr[right] = pivot
+//   return left
+// }
+// function quickSort(arr,i ,j){
+//   let middle = quickSortM(arr,i ,j)
+//   if(i<j){
+//     quickSort(arr,i,middle - 1)
+//     quickSort(arr, middle+1, j)
+//   }
+// }
+
+// let arr = [12,2,45,8,5,4,54]
+// quickSort(arr,0,arr.length-1)
+// console.log(arr)
+// console.log(arr)
+
+// function quickSortM(arr, left, right){
+//   // let left = 0
+//   // let right = arr.length - 1
+//   let pivot = arr[right]
+//   while(left < right){
+//     while(left < right && arr[left] <= pivot) left++
+//     arr[right] = arr[left]
+//     while(left < right && arr[right] >= pivot) right--
+//     arr[left] = arr[right]
+//   }
+//   arr[right] = pivot
+//   return left
+// }
+// function quickSort(arr,i ,j){
+//   let middle = quickSortM(arr,i ,j)
+//   if(i<j){
+//     quickSort(arr,i,middle - 1)
+//     quickSort(arr, middle+1, j)
+//   }
+// }
+
+// // let arr = [12,2,45,45,8,5,4,54]
+// // quickSort(arr,0,arr.length-1)
+// // console.log(arr)
+
+// var sortString = function(s = "324159867") {
+//   let arr = s.split('')
+//   quickSort(arr,0,arr.length-1)
+//   // let fArr = [...new Set(arr)]
+//   console.log(arr)
+
+// };
+// // sortString()
+
+
+// let arr = [1]
+// console.log(arr.splice(0,0,3))
+// console.log(arr)
+// console.log(arr.join(''))
+
+
+let a = [1,2,3]
+// console.log(a)
+let obj = {}
+console.log(obj.a)
+while(a.__proto__) {
+  console.log(typeof a)
+  a = a.__proto__
+  console.log(a)
+}
+obj.__proto__ = a.__proto__
+console.log(obj.b)
+console.log(obj)
+  </script>
+</body>
+</html>

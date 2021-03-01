@@ -1,9 +1,9 @@
-// for (var a = 0; a < 5; a++) { 
+// for (let a = 0; a < 5; a++) { 
 //   setTimeout(
 //     () => console.log(a)
 //   , 1000) 
 // }
-//5个 5
+// 5个 5
 
 
 /**立即执行函数*/

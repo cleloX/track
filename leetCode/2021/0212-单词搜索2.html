@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /**
+ * @param {character[][]} board
+ * @param {string[]} words
+ * @return {string[]}
+ */
+
+ /*
+ 1.将words构建字符前缀树
+ 2. 
+ */
+class Trie{
+  constructor(){
+    this.root = {}
+  }
+  insert(word){
+    
+    if(toString.call(word) === '[object String]'){
+      let node = this.root
+      for(let c of word){
+        if(node[c] === undefined) node[c] = {}
+        node = node[c]
+      }
+      node['end'] = true
+    }
+    else if(toString.call(word) === '[object Array]'){
+      word.forEach(w => this.insert(w))
+    }
+  }
+}
+var findWords = function(board, words) {
+  let trie = new Trie()
+  trie.insert(words)
+  
+};
+console.log(findWords([["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], ["oath","pea","eat","rain"]));
+  </script>
+</body>
+</html>

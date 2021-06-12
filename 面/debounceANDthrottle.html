@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="con(5)">click</button>
+  <script>
+     //触发高频事件后n 秒内函数只会执行一次，如果 n 秒内高频事件再次被触发，则重新计算时间。
+// function debounce(fn, time){
+//   let timer = null
+//   return function(){
+//     let context = this
+//     let arg = [...arguments]
+//     // console.log(arg);
+//     clearTimeout(timer)
+//     timer =  setTimeout(() => {
+//       fn.apply(context, arg)
+//       // fn()
+//     }, time)
+//   }
+// }
+function fun(a){
+  console.log(a,5555);
+}
+// let con = debounce(fun,1000)
+
+// document.addEventListener('mousemove',con)
+
+
+/**
+ * 高频事件触发，但在n 秒内只会执行一次，所以节流会稀释函数的执行效率
+*/
+function throttle(fn, time){
+  // let trigger = false
+  // return function(){
+  //   if(trigger) return
+  //   fn()
+  //   trigger = true
+  //   setTimeout(() => trigger = false, time)
+  // }
+
+  // 
+  let pre = Date.now()
+  return function(){
+    let now = Date.now()
+    if(now - pre > time){
+      pre = Date.now()
+      fn.apply(this,arguments)
+      return
+    }
+  }
+}
+
+// let con = throttle(fun,2000)
+let con = function(){
+  window.resizeTo(50,50)
+}
+
+
+
+  </script>
+</body>
+</html>
